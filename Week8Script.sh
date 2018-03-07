@@ -19,3 +19,15 @@ chmod 755 file1.txt
 
 ls -l
 
+ls /dev
+
+cd /dev
+pwd
+
+echo Hi there > /dev/null
+
+# Showing the path for the device sda
+udevadm info --query=all --name=/dev/sda
+
+udevadm monitor
+
