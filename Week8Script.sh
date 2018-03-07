@@ -17,3 +17,5 @@ rm file2.txt
 
 chmod 755 file1.txt
 
+ls -l
+
