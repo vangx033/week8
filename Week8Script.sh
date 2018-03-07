@@ -29,9 +29,7 @@ echo Hi there > /dev/null
 # Showing the path for the device sda
 udevadm info --query=all --name=/dev/sda
 
-udevadm monitor
-
-# chapter 4 
+udevadm monitor 
 
 # View current mounted filesystem status
 mount | less
@@ -66,3 +64,14 @@ sudo dmesg | less
 # Go back to home directory and view kernel's parameters
 cd ..
 cat /proc/cdmline
+
+# Display current runlevel and when was it established
+who -r
+
+# Display current configuration search path, init information and jobs
+systemctl -p UnitPath show
+systemctl list-units
+systemctl list-jobs
+
+# Display an overview of the system
+init ctl list
