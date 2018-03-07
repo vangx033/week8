@@ -75,3 +75,11 @@ systemctl list-jobs
 
 # Display an overview of the system
 init ctl list
+
+# Testing the system logger
+logger -p daemon.info Hey this is testing
+
+# Showing terminals and display a login prompt
+ps ao args | grep getty
+
+echo "Thanks for looking"
