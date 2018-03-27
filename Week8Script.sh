@@ -1,6 +1,6 @@
 #!/bin/bash
 #Xee Ho Vang
-#Week 8 script
+#Week 11 script - Late summit
 
 echo "Hello Class"
 
