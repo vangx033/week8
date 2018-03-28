@@ -31,7 +31,7 @@ rm file2.txt
 
 sleep 5
 
-ls -l
+ls
 
 sleep 5
 
@@ -52,18 +52,18 @@ sleep 5
 
 echo Hi there > /dev/null
 
-# Showing the path for the device sda
+# Showing the path for the device sda and press Q to exit
 udevadm info --query=all --name=/dev/sda
 
 sleep 5
 
-# Monitoring udev events
-udevadm monitor udev 
+# Edit this as a comment so the script won't stuck on monitoring
+#udevadm monitor udev 
 
 sleep 5
 
-# View current mounted filesystem status
-mount | less
+# View current mounted filesystem status and press Q to exit
+sudo mount | less
 
 sleep 5
 
@@ -71,7 +71,7 @@ sudo dmesg | less
 
 sleep 5
 
-# View Universally Unique Identify (UUID)
+# View Universally Unique Identify (UUID) and press Q to exit 
 sudo blkid
 
 sleep 5
@@ -116,7 +116,6 @@ sleep 5
 
 # Go back to home directory and view kernel's parameters
 cd ..
-cat /proc/cdmline
 
 sleep 5
 
@@ -125,7 +124,7 @@ who -r
 
 sleep 5
 
-# Display current configuration search path, init information and jobs
+# Display current configuration search path, init information and jobs and press Q to exit
 systemctl -p UnitPath show
 systemctl list-units
 systemctl list-jobs
